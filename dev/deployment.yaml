@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-service
+spec:
+  selector:
+    matchLabels:
+      app: sample-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sample-service
+    spec:
+      containers:
+      - name: sample-service
+        image: rakeshdyx/argocd-app:1.2
+        ports:
+        - containerPort: 8080
