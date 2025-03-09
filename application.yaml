@@ -9,6 +9,7 @@ spec:
   source:
     repoURL: https://github.com/rakeshdyx/sample-service.git
     path: dev
+    targetRevision: main
   destination: 
     server: https://kubernetes.default.svc
     namespace: testapp
